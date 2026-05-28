@@ -1,0 +1,385 @@
+export default function AIWorkshopWebsite() {
+  const games = [
+    {
+      title: "Human vs AI",
+      description:
+        "Students guess whether content was created by a human or artificial intelligence.",
+      icon: "🤖",
+    },
+    {
+      title: "Train Your AI",
+      description:
+        "Students teach AI how to recognize objects using examples and categories.",
+      icon: "🧠",
+    },
+    {
+      title: "AI Drawing Challenge",
+      description:
+        "Draw objects while AI tries to guess what you are sketching.",
+      icon: "🎨",
+    },
+    {
+      title: "Chatbot Explorer",
+      description:
+        "Interact with AI chatbots and test creativity, knowledge, and problem solving.",
+      icon: "💬",
+    },
+  ];
+
+  const aiSteps = [
+    {
+      step: "1",
+      title: "Collect Data",
+      text: "AI first learns using thousands of examples such as images, text, or sounds.",
+    },
+    {
+      step: "2",
+      title: "Training",
+      text: "The computer searches for patterns and relationships inside the data.",
+    },
+    {
+      step: "3",
+      title: "Prediction",
+      text: "AI uses what it learned to answer questions or make decisions.",
+    },
+    {
+      step: "4",
+      title: "Improvement",
+      text: "AI becomes smarter by learning from new examples and corrections.",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-purple-950 to-pink-950 text-white">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden px-6 py-20 lg:px-20">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 left-10 h-72 w-72 rounded-full bg-pink-500 blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 h-72 w-72 rounded-full bg-cyan-500 blur-3xl"></div>
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-6xl text-center">
+          <div className="mb-6 inline-flex rounded-full border border-pink-400/40 bg-pink-500/10 px-5 py-2 text-sm font-medium tracking-wide">
+            AI WORKSHOP FOR GIRLS HIGH SCHOOL
+          </div>
+
+          <h1 className="mb-8 text-5xl font-extrabold leading-tight md:text-7xl">
+            Discover How
+            <span className="bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">
+              {" "}Artificial Intelligence{" "}
+            </span>
+            Works
+          </h1>
+
+          <p className="mx-auto mb-10 max-w-3xl text-lg text-slate-300 md:text-xl">
+            Interactive games, real AI experiments, smart activities, and hands-on learning designed to help students explore the future of technology.
+          </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <button className="rounded-2xl bg-pink-500 px-8 py-4 text-lg font-semibold shadow-2xl transition hover:scale-105 hover:bg-pink-400">
+              Start Learning
+            </button>
+
+            <button className="rounded-2xl border border-white/20 bg-white/10 px-8 py-4 text-lg font-semibold backdrop-blur transition hover:bg-white/20">
+              Explore Games
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* About AI */}
+      <section className="px-6 py-20 lg:px-20">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2">
+          <div>
+            <h2 className="mb-6 text-4xl font-bold">
+              What is Artificial Intelligence?
+            </h2>
+
+            <p className="mb-6 text-lg leading-relaxed text-slate-300">
+              Artificial Intelligence (AI) is technology that allows computers to learn from information, recognize patterns, solve problems, and make smart decisions similar to humans.
+            </p>
+
+            <p className="text-lg leading-relaxed text-slate-300">
+              AI is already part of our daily lives through social media, mobile phones, online shopping, voice assistants, healthcare systems, and smart applications.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+            <h3 className="mb-6 text-2xl font-bold text-pink-300">
+              Real-Life AI Examples
+            </h3>
+
+            <div className="space-y-4">
+              {[
+                "📱 Face Unlock on Smartphones",
+                "🎬 YouTube Recommendations",
+                "🛍 Smart Shopping Suggestions",
+                "🎵 Music Recommendations",
+                "🚗 Self-Driving Cars",
+                "🏥 Medical Diagnosis Systems",
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="rounded-2xl border border-white/10 bg-black/20 p-4"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How AI Works */}
+      <section className="bg-black/20 px-6 py-20 lg:px-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-bold">
+              How AI Works Practically
+            </h2>
+            <p className="mx-auto max-w-3xl text-lg text-slate-300">
+              Students can understand AI by learning the same process used in real machine learning systems.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {aiSteps.map((step, index) => (
+              <div
+                key={index}
+                className="rounded-3xl border border-white/10 bg-white/5 p-8 text-center shadow-xl backdrop-blur"
+              >
+                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-cyan-500 text-2xl font-bold">
+                  {step.step}
+                </div>
+
+                <h3 className="mb-4 text-2xl font-bold">{step.title}</h3>
+                <p className="text-slate-300">{step.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AI Games */}
+      <section className="px-6 py-20 lg:px-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-bold">
+              Interactive AI Games
+            </h2>
+
+            <p className="mx-auto max-w-3xl text-lg text-slate-300">
+              Fun educational activities designed to help students experience AI practically.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            {games.map((game, index) => (
+              <div
+                key={index}
+                className="group rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 transition duration-300 hover:scale-105 hover:border-pink-400/50"
+              >
+                <div className="mb-6 text-5xl">{game.icon}</div>
+
+                <h3 className="mb-4 text-3xl font-bold">{game.title}</h3>
+
+                <p className="mb-6 text-slate-300">
+                  {game.description}
+                </p>
+
+                <button className="rounded-xl bg-gradient-to-r from-pink-500 to-cyan-500 px-6 py-3 font-semibold transition hover:opacity-90">
+                  Launch Activity
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Live Demo Section */}
+      <section className="bg-black/30 px-6 py-20 lg:px-20">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2">
+          <div>
+            <h2 className="mb-6 text-4xl font-bold">
+              Practical AI Experiment
+            </h2>
+
+            <p className="mb-6 text-lg text-slate-300">
+              Students can simulate how machine learning works by teaching the AI to recognize different categories.
+            </p>
+
+            <div className="space-y-4">
+              <div className="rounded-2xl border border-pink-500/20 bg-pink-500/10 p-5">
+                Step 1: Upload or show examples.
+              </div>
+
+              <div className="rounded-2xl border border-cyan-500/20 bg-cyan-500/10 p-5">
+                Step 2: AI learns patterns.
+              </div>
+
+              <div className="rounded-2xl border border-purple-500/20 bg-purple-500/10 p-5">
+                Step 3: AI predicts new examples.
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+            <h3 className="mb-6 text-3xl font-bold text-cyan-300">
+              Example AI Training
+            </h3>
+
+            <div className="space-y-5">
+              <div>
+                <div className="mb-2 flex items-center justify-between">
+                  <span>Cats Images</span>
+                  <span>90%</span>
+                </div>
+                <div className="h-3 rounded-full bg-white/10">
+                  <div className="h-3 w-[90%] rounded-full bg-pink-500"></div>
+                </div>
+              </div>
+
+              <div>
+                <div className="mb-2 flex items-center justify-between">
+                  <span>Dogs Images</span>
+                  <span>75%</span>
+                </div>
+                <div className="h-3 rounded-full bg-white/10">
+                  <div className="h-3 w-[75%] rounded-full bg-cyan-500"></div>
+                </div>
+              </div>
+
+              <div>
+                <div className="mb-2 flex items-center justify-between">
+                  <span>Cars Images</span>
+                  <span>65%</span>
+                </div>
+                <div className="h-3 rounded-full bg-white/10">
+                  <div className="h-3 w-[65%] rounded-full bg-purple-500"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Careers */}
+      <section className="px-6 py-20 lg:px-20">
+        <div className="mx-auto max-w-6xl text-center">
+          <h2 className="mb-6 text-4xl font-bold">
+            Future Careers in AI
+          </h2>
+
+          <p className="mx-auto mb-12 max-w-3xl text-lg text-slate-300">
+            Artificial Intelligence opens exciting opportunities for girls in technology, science, design, healthcare, engineering, and innovation.
+          </p>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              "AI Engineer",
+              "Robotics Developer",
+              "Cybersecurity Expert",
+              "AI Researcher",
+              "Medical AI Specialist",
+              "Data Scientist",
+              "UX Designer",
+              "Machine Learning Engineer",
+            ].map((career, index) => (
+              <div
+                key={index}
+                className="rounded-2xl border border-white/10 bg-white/5 p-6 font-semibold backdrop-blur"
+              >
+                {career}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      {/* Website Creation Steps */}
+      <section className="bg-black/20 px-6 py-20 lg:px-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-14 text-center">
+            <h2 className="mb-4 text-4xl font-bold">
+              How This Website Was Created
+            </h2>
+
+            <p className="mx-auto max-w-3xl text-lg text-slate-300">
+              Students can also learn the simple steps used to build modern AI educational websites.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Planning",
+                text: "Define workshop goals, audience, activities, and educational content.",
+                icon: "📝",
+              },
+              {
+                title: "Design",
+                text: "Create modern layouts, choose colors, and organize sections clearly.",
+                icon: "🎨",
+              },
+              {
+                title: "Development",
+                text: "Build the website using React, components, animations, and responsive design.",
+                icon: "💻",
+              },
+              {
+                title: "Publishing",
+                text: "Upload the website online using hosting platforms like GitHub or Vercel.",
+                icon: "🚀",
+              },
+            ].map((step, index) => (
+              <div
+                key={index}
+                className="rounded-3xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur"
+              >
+                <div className="mb-5 text-5xl">{step.icon}</div>
+                <h3 className="mb-4 text-2xl font-bold">{step.title}</h3>
+                <p className="text-slate-300">{step.text}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-14 rounded-3xl border border-pink-500/20 bg-gradient-to-r from-pink-500/10 to-cyan-500/10 p-10 text-center">
+            <h3 className="mb-4 text-3xl font-bold text-pink-300">
+              Technologies Used
+            </h3>
+
+            <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              {[
+                "React.js",
+                "Tailwind CSS",
+                "Responsive Design",
+                "Interactive UI",
+              ].map((tech, index) => (
+                <div
+                  key={index}
+                  className="rounded-2xl border border-white/10 bg-black/20 p-4 font-semibold"
+                >
+                  {tech}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-white/10 px-6 py-10 text-center text-slate-400">
+        <p className="mb-2 text-lg font-medium text-white">
+          Girls in AI Workshop
+        </p>
+        <p>
+          Inspiring the next generation of innovators and future technology leaders.
+        </p>
+
+        <div className="mt-6 text-base text-pink-300">
+          Created by Dr Abduljabbar AlSharif
+        </div>
+      </footer>
+    </div>
+  );
+}
